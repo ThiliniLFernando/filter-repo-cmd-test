@@ -6,4 +6,3 @@ service.b.url=http://localhost:8082
 environment=DEV2
 
 logging.level.root=DEBUG
-feature.flag=true

@@ -19,4 +19,9 @@ public class MessageController {
     public String message() {
         return message + " | Environment: " + environment;
     }
+
+    @GetMapping("/version")
+    public String version() {
+        return "Service B Version 2";
+    }
 }

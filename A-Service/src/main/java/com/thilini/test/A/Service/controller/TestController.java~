@@ -1,0 +1,19 @@
+package com.thilini.test.A.Service.controller;
+
+@RestController
+@RequestMapping("/api")
+public class TestController {
+
+    @Value("${service.b.url}")
+    private String serviceBUrl;
+
+    private final RestTemplate restTemplate = new RestTemplate();
+
+    @GetMapping("/test")
+    public String test() {
+        return restTemplate.getForObject(
+                serviceBUrl + "/api/message",
+                String.class
+        );
+    }
+}

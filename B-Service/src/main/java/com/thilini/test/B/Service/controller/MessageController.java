@@ -19,4 +19,9 @@ public class MessageController {
     public String message() {
         return message + " | Environment: " + environment;
     }
+
+    @GetMapping("/health")
+    public String health() {
+        return "Application Healthy";
+    }
 }
